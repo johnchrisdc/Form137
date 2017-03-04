@@ -37,8 +37,8 @@ $primary-color: color("grey", "darken-4") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("teal", "lighten-1") !default;
-$success-color: color("green", "base") !default;
+$secondary-color: $primary-color !default;
+$success-color: color("pink", "lighten-3") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
 
@@ -163,7 +163,7 @@ $input-invalid-border: 1px solid $input-error-color !default;
 $placeholder-text-color: lighten($input-border-color, 20%) !default;
 
 // Radio Buttons
-$radio-fill-color: $secondary-color !default;
+$radio-fill-color: color("pink", "lighten-2") !default;
 $radio-empty-color: #5a5a5a !default;
 $radio-border: 2px solid $radio-fill-color !default;
 

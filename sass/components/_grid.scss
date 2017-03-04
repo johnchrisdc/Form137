@@ -26,6 +26,14 @@
     width: 100%;
   }
 }
+.container-sexy-body {
+  @extend .container;
+}
+@media #{$medium-and-up} {
+  .container-sexy-body {
+    width: 90%;
+  }
+}
 
 .section {
   padding-top: 1rem;

@@ -1366,7 +1366,7 @@ DatePicker.defaults = (function( prefix ) {
         close: 'Close',
 
         // The format to show on the `input` element
-        format: 'd mmmm, yyyy',
+        format: 'mmmm d, yyyy',
 
         // Classes
         klass: {
@@ -1426,5 +1426,3 @@ Picker.extend( 'pickadate', DatePicker )
 
 
 }));
-
-
