@@ -82,7 +82,13 @@ var app = new Vue({
     grade_1_1q_mother_tongue: 0,
     grade_1_2q_mother_tongue: 0,
     grade_1_3q_mother_tongue: 0,
-    grade_1_4q_mother_tongue: 0
+    grade_1_4q_mother_tongue: 0,
+    grade_1_1q_mapeh: 0,
+    grade_1_2q_mapeh: 0,
+    grade_1_3q_mapeh: 0,
+    grade_1_4q_mapeh: 0,
+    grade_1_final_mapeh: 0,
+    grade_1_general_average: 0
   },
   methods: {
     show_modal: function() {
@@ -106,6 +112,22 @@ var app = new Vue({
         format: [8.5, 11]
       });
 
+      this.grade_1_final_filipino = Number( ( (this.grade_1_2q_filipino + this.grade_1_3q_filipino + this.grade_1_4q_filipino) / 3 ).toFixed(0) ).toFixed(2);
+      this.grade_1_final_english = Number( ( (this.grade_1_3q_english + this.grade_1_4q_english) / 2 ).toFixed(0) ).toFixed(2);
+      this.grade_1_final_mathematics = Number( ( (this.grade_1_1q_mathematics + this.grade_1_2q_mathematics + this.grade_1_3q_mathematics + this.grade_1_4q_mathematics) / 4 ).toFixed(0) ).toFixed(2);
+      this.grade_1_final_science = Number( ( (this.grade_1_1q_science + this.grade_1_2q_science + this.grade_1_3q_science + this.grade_1_4q_science) / 4 ).toFixed(0) ).toFixed(2);
+      this.grade_1_final_esp = Number( ( (this.grade_1_1q_esp + this.grade_1_2q_esp + this.grade_1_3q_esp + this.grade_1_4q_esp) / 4 ).toFixed(0) ).toFixed(2);
+
+      this.grade_1_1q_mapeh = Number( ( (this.grade_1_1q_music + this.grade_1_1q_arts + this.grade_1_1q_pe + this.grade_1_1q_health) / 4 ).toFixed(0) );
+      this.grade_1_2q_mapeh = Number( ( (this.grade_1_2q_music + this.grade_1_2q_arts + this.grade_1_2q_pe + this.grade_1_2q_health) / 4 ).toFixed(0) );
+      this.grade_1_3q_mapeh = Number( ( (this.grade_1_3q_music + this.grade_1_3q_arts + this.grade_1_3q_pe + this.grade_1_3q_health) / 4 ).toFixed(0) );
+      this.grade_1_4q_mapeh = Number( ( (this.grade_1_4q_music + this.grade_1_4q_arts + this.grade_1_4q_pe + this.grade_1_4q_health) / 4 ).toFixed(0) );
+
+      this.grade_1_final_mapeh = Number( ( (this.grade_1_1q_mapeh + this.grade_1_2q_mapeh + this.grade_1_3q_mapeh + this.grade_1_4q_mapeh) / 4 ).toFixed(0) ).toFixed(2);
+      this.grade_1_final_mother_tongue = Number( ( (this.grade_1_1q_mother_tongue + this.grade_1_2q_mother_tongue + this.grade_1_3q_mother_tongue + this.grade_1_4q_mother_tongue) / 4 ).toFixed(0) ).toFixed(2);
+
+      this.grade_1_general_average = Number( ( (Number(this.grade_1_final_filipino) + Number(this.grade_1_final_english) + Number(this.grade_1_final_mathematics) + Number(this.grade_1_final_esp) + Number(this.grade_1_final_mapeh) + Number(this.grade_1_final_mother_tongue)) / 6 ).toFixed(0) ).toFixed(2);
+
       doc.setTextColor(0, 0, 0);
       doc.setFontSize(9);
       doc.text(this.lrn, 1.0009, 2.18);
@@ -128,21 +150,29 @@ var app = new Vue({
       doc.text(this.hanapbuhay, 6.7, 3.55);
 
       //GRADES - Grade 1
-      doc.setFontSize(7);
+      doc.text('I', 0.9, 4.55);
       doc.text(this.grade_1_paaralan, 1.6, 4.55);
 
-      doc.setFontSize(9);
+      doc.text(this.grade_1_sy, 1.25, 4.68);
+      doc.text(this.grade_1_adviser, 2.55, 4.68);
+
       doc.text(this.grade_1_2q_filipino + "", 2.4, 5.22);
       doc.text(this.grade_1_3q_filipino + "", 2.7, 5.22);
       doc.text(this.grade_1_4q_filipino + "", 2.98, 5.22);
+      doc.text(this.grade_1_final_filipino + "", 3.25, 5.22);
+      doc.text(this.grade_1_final_filipino < 75 ? 'Failed' : 'Passed', 3.65, 5.22);
 
       doc.text(this.grade_1_3q_english + "", 2.7, 5.37);
       doc.text(this.grade_1_4q_english + "", 2.98, 5.37);
+      doc.text(this.grade_1_final_english + "", 3.25, 5.37);
+      doc.text(this.grade_1_final_english < 75 ? 'Failed' : 'Passed', 3.65, 5.37);
 
       doc.text(this.grade_1_1q_mathematics + "", 2.1, 5.52);
       doc.text(this.grade_1_2q_mathematics + "", 2.4, 5.52);
       doc.text(this.grade_1_3q_mathematics + "", 2.7, 5.52);
       doc.text(this.grade_1_4q_mathematics + "", 2.98, 5.52);
+      doc.text(this.grade_1_final_mathematics + "", 3.25, 5.52);
+      doc.text(this.grade_1_final_mathematics < 75 ? 'Failed' : 'Passed', 3.65, 5.52);
 
       // doc.text(this.grade_1_2q_science + "", 2.1, 5.67);
       // doc.text(this.grade_1_2q_science + "", 2.4, 5.67);
@@ -153,11 +183,22 @@ var app = new Vue({
       doc.text(this.grade_1_2q_ap + "", 2.4, 5.82);
       doc.text(this.grade_1_3q_ap + "", 2.7, 5.82);
       doc.text(this.grade_1_4q_ap + "", 2.98, 5.82);
+      doc.text(this.grade_1_final_science + "", 3.25, 5.82);
+      doc.text(this.grade_1_final_science < 75 ? 'Failed' : 'Passed', 3.65, 5.82);
 
       doc.text(this.grade_1_1q_esp + "", 2.1, 5.98);
       doc.text(this.grade_1_2q_esp + "", 2.4, 5.98);
       doc.text(this.grade_1_3q_esp + "", 2.7, 5.98);
       doc.text(this.grade_1_4q_esp + "", 2.98, 5.98);
+      doc.text(this.grade_1_final_esp + "", 3.25, 5.98);
+      doc.text(this.grade_1_final_esp < 75 ? 'Failed' : 'Passed', 3.65, 5.98);
+
+      doc.text(this.grade_1_1q_mapeh + "", 2.1, 6.34);
+      doc.text(this.grade_1_2q_mapeh + "", 2.4, 6.34);
+      doc.text(this.grade_1_3q_mapeh + "", 2.7, 6.34);
+      doc.text(this.grade_1_4q_mapeh + "", 2.98, 6.34);
+      doc.text(this.grade_1_final_mapeh + "", 3.25, 6.34);
+      doc.text(this.grade_1_final_mapeh < 75 ? 'Failed' : 'Passed', 3.65, 6.34);
 
       doc.text(this.grade_1_1q_music + "", 2.1, 6.49);
       doc.text(this.grade_1_2q_music + "", 2.4, 6.49);
@@ -183,6 +224,11 @@ var app = new Vue({
       doc.text(this.grade_1_2q_mother_tongue + "", 2.4, 7.07);
       doc.text(this.grade_1_3q_mother_tongue + "", 2.7, 7.07);
       doc.text(this.grade_1_4q_mother_tongue + "", 2.98, 7.07);
+      doc.text(this.grade_1_final_mother_tongue + "", 3.25, 7.07);
+      doc.text(this.grade_1_final_mother_tongue < 75 ? 'Failed' : 'Passed', 3.65, 7.07);
+
+      doc.text(this.grade_1_general_average + "", 3.25, 7.36);
+      doc.text(this.grade_1_general_average < 75 ? 'Failed' : 'Passed', 3.65, 7.36);
 
       doc.save(this.apelyido + this.unang_ngalan + this.gitna + '.pdf');
     }

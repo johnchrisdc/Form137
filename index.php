@@ -141,450 +141,448 @@
             </div>
 
             <div class="row">
-              <label>Grade 1</label>
               <div class="col s12">
-                <div class="card-panel white">
-                  <table class="">
-                    <thead>
-                      <tr>
-                          <th data-field="id">Learning Areas</th>
-                          <th data-field="name">1st Quarter</th>
-                          <th data-field="price">2nd Quarter</th>
-                          <th data-field="price">3rd Quarter</th>
-                          <th data-field="price">4th Quarter</th>
-                          <th data-field="price">Final Grade</th>
-                          <th data-field="price">Remarks</th>
-                      </tr>
-                    </thead>
+                <table class="">
+                  <thead>
+                    <tr>
+                        <th data-field="id">Learning Areas</th>
+                        <th data-field="name">1st Quarter</th>
+                        <th data-field="price">2nd Quarter</th>
+                        <th data-field="price">3rd Quarter</th>
+                        <th data-field="price">4th Quarter</th>
+                        <th data-field="price">Final Grade</th>
+                        <th data-field="price">Remarks</th>
+                    </tr>
+                  </thead>
 
-                    <tbody>
-                      <tr class="grey lighten-5">
-                        <td>&nbsp;Filipino</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_filipino" type="number" class="validate" disabled>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_filipino" type="number" class="validate" v-model.number="grade_1_2q_filipino" number>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_filipino" type="number" class="validate" v-model.number="grade_1_3q_filipino" number>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_filipino" type="number" class="validate" v-model.number="grade_1_4q_filipino" number>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_filipino" type="text" class="validate" disabled></input>
-                            <label for="grade_1_final_filipino">{{ Number( ( (grade_1_2q_filipino + grade_1_3q_filipino + grade_1_4q_filipino) / 3 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s2">
-                            <input id="grade_1_final_filipino_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_filipino_remarks">{{ Number( ( (grade_1_2q_filipino + grade_1_3q_filipino + grade_1_4q_filipino) / 3 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="blue lighten-5">
-                        <td>&nbsp;English</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_english" type="text" class="validate" disabled>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_english" type="text" class="validate" disabled>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_english" type="number" class="validate" v-model.number="grade_1_3q_english">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_english" type="number" class="validate" v-model.number="grade_1_4q_english">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_english" type="text" class="validate" disabled></input>
-                            <label for="grade_1_final_english">{{ Number( ( (grade_1_3q_english + grade_1_4q_english) / 2 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_english_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_english_remarks">{{ Number( ( (grade_1_3q_english + grade_1_4q_english) / 2 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="indigo lighten-5">
-                        <td>&nbsp;Mathematics</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_mathematics" type="number" class="validate" v-model.number="grade_1_1q_mathematics">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_mathematics" type="number" class="validate" v-model.number="grade_1_2q_mathematics">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_mathematics" type="number" class="validate" v-model.number="grade_1_3q_mathematics">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_mathematics" type="number" class="validate" v-model.number="grade_1_4q_mathematics">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_mathematics" type="text" class="validate" disabled></input>
-                            <label for="grade_1_final_mathematics">{{ Number( ( (grade_1_1q_mathematics + grade_1_2q_mathematics + grade_1_3q_mathematics + grade_1_4q_mathematics) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_mathematics_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_mathematics_remarks">{{ Number( ( (grade_1_1q_mathematics + grade_1_2q_mathematics + grade_1_3q_mathematics + grade_1_4q_mathematics) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="green lighten-5">
-                        <td>&nbsp;Science</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_science" type="number" class="validate" v-model.number="grade_1_1q_science">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_science" type="number" class="validate" v-model.number="grade_1_2q_science">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_science" type="number" class="validate" v-model.number="grade_1_3q_science">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_science" type="number" class="validate" v-model.number="grade_1_4q_science">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_science" type="text" class="validate" disabled></input>
-                            <label for="grade_1_final_science">{{ Number( ( (grade_1_1q_science + grade_1_2q_science + grade_1_3q_science + grade_1_4q_science) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_science_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_science_remarks">{{ Number( ( (grade_1_1q_science + grade_1_2q_science + grade_1_3q_science + grade_1_4q_science) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="orange lighten-5">
-                        <td>&nbsp;Araling Panlipunan</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_ap" type="number" class="validate" v-model.number="grade_1_1q_ap">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_ap" type="number" class="validate" v-model.number="grade_1_2q_ap">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_ap" type="number" class="validate" v-model.number="grade_1_3q_ap">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_ap" type="number" class="validate" v-model.number="grade_1_4q_ap">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_ap" type="text" class="validate" disabled></input>
-                            <label for="grade_1_final_ap">{{ Number( ( (grade_1_1q_ap + grade_1_2q_ap + grade_1_3q_ap + grade_1_4q_ap) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_ap_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_ap_remarks">{{ Number( ( (grade_1_1q_ap + grade_1_2q_ap + grade_1_3q_ap + grade_1_4q_ap) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="blue-grey lighten-5">
-                        <td>&nbsp;Edukasyon sa Pagpapakatao</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_esp" type="number" class="validate" v-model.number="grade_1_1q_esp">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_esp" type="number" class="validate" v-model.number="grade_1_2q_esp">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_esp" type="number" class="validate" v-model.number="grade_1_3q_esp">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_esp" type="number" class="validate" v-model.number="grade_1_4q_esp">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_esp" type="text" class="validate" disabled></input>
-                            <label for="grade_1_final_esp">{{ Number( ( (grade_1_1q_esp + grade_1_2q_esp + grade_1_3q_esp + grade_1_4q_esp) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_esp_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_esp_remarks">{{ Number( ( (grade_1_1q_esp + grade_1_2q_esp + grade_1_3q_esp + grade_1_4q_esp) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="">
-                        <td>&nbsp;MAPEH</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_music" type="number" class="validate" disabled>
-                            <label for="grade_1_1q_music">{{ Number( ( (grade_1_1q_music + grade_1_1q_arts + grade_1_1q_pe + grade_1_1q_health) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_music" type="number" class="validate" disabled>
-                            <label for="grade_1_2q_music">{{ Number( ( (grade_1_2q_music + grade_1_2q_arts + grade_1_2q_pe + grade_1_2q_health) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_music" type="number" class="validate" disabled>
-                            <label for="grade_1_3q_music">{{ Number( ( (grade_1_3q_music + grade_1_3q_arts + grade_1_3q_pe + grade_1_3q_health) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_music" type="number" class="validate" disabled>
-                            <label for="grade_1_4q_music">{{ Number( ( (grade_1_4q_music + grade_1_4q_arts + grade_1_4q_pe + grade_1_4q_health) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_music" type="text" class="validate" disabled></input>
-                            <label for="grade_1_final_music">{{ Number( ( (grade_1_1q_music + grade_1_2q_music + grade_1_3q_music + grade_1_4q_music) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_music_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_music_remarks">{{ Number( ( (grade_1_1q_music + grade_1_2q_music + grade_1_3q_music + grade_1_4q_music) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="amber lighten-5">
-                        <td>&nbsp;&nbsp;&nbsp; Music</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_music" type="number" class="validate" v-model.number="grade_1_1q_music">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_music" type="number" class="validate" v-model.number="grade_1_2q_music">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_music" type="number" class="validate" v-model.number="grade_1_3q_music">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_music" type="number" class="validate" v-model.number="grade_1_4q_music">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_music" type="text" class="validate" disabled></input>
-                            <label for="grade_1_final_music">{{ Number( ( (grade_1_1q_music + grade_1_2q_music + grade_1_3q_music + grade_1_4q_music) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_music_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_music_remarks">{{ Number( ( (grade_1_1q_music + grade_1_2q_music + grade_1_3q_music + grade_1_4q_music) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="amber lighten-5">
-                        <td>&nbsp;&nbsp;&nbsp; Arts</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_arts" type="number" class="validate" v-model.number="grade_1_1q_arts">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_arts" type="number" class="validate" v-model.number="grade_1_2q_arts">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_arts" type="number" class="validate" v-model.number="grade_1_3q_arts">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_arts" type="number" class="validate" v-model.number="grade_1_4q_arts">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_music" type="text" class="validate" disabled></input>
-                            <label for="grade_1_final_music">{{ Number( ( (grade_1_1q_arts + grade_1_2q_arts + grade_1_3q_arts + grade_1_4q_arts) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_music_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_music_remarks">{{ Number( ( (grade_1_1q_arts + grade_1_2q_arts + grade_1_3q_arts + grade_1_4q_arts) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="amber lighten-5">
-                        <td>&nbsp;&nbsp;&nbsp; PE</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_pe" type="number" class="validate" v-model.number="grade_1_1q_pe">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_pe" type="number" class="validate" v-model.number="grade_1_2q_pe">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_pe" type="number" class="validate" v-model.number="grade_1_3q_pe">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_pe" type="number" class="validate" v-model.number="grade_1_4q_pe">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_music" type="text" class="validate" disabled></input>
-                            <label for="grade_1_final_music">{{ Number( ( (grade_1_1q_pe + grade_1_2q_pe + grade_1_3q_pe + grade_1_4q_pe) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_music_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_music_remarks">{{ Number( ( (grade_1_1q_pe + grade_1_2q_pe + grade_1_3q_pe + grade_1_4q_pe) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="amber lighten-5">
-                        <td>&nbsp;&nbsp;&nbsp; Health</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_health" type="number" class="validate" v-model.number="grade_1_1q_health">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_health" type="number" class="validate" v-model.number="grade_1_2q_health">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_health" type="number" class="validate" v-model.number="grade_1_3q_health">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_health" type="number" class="validate" v-model.number="grade_1_4q_health">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_health" type="text" class="validate" disabled></input>
-                            <label for="grade_1_final_health">{{ Number( ( (grade_1_1q_health + grade_1_2q_health + grade_1_3q_health + grade_1_4q_health) / 4 ).toFixed(0) ).toFixed(2) }}</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_health_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_health_remarks">{{ Number( ( (grade_1_1q_health + grade_1_2q_health + grade_1_3q_health + grade_1_4q_health) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="green lighten-5">
-                        <td>&nbsp; Mother Tongue</td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_1q_mother_tongue" type="number" class="validate" v-model.number="grade_1_1q_mother_tongue">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_2q_mother_tongue" type="number" class="validate" v-model.number="grade_1_2q_mother_tongue">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_3q_mother_tongue" type="number" class="validate" v-model.number="grade_1_3q_mother_tongue">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_4q_mother_tongue" type="number" class="validate" v-model.number="grade_1_4q_mother_tongue">
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_mother_tongue" type="text" class="validate" disabled></input>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="input-field col s12">
-                            <input id="grade_1_final_mother_tongue_remarks" type="text" class="validate" disabled>
-                            <label for="grade_1_final_mother_tongue_remarks">{{ Number( ( (grade_1_1q_mother_tongue + grade_1_2q_mother_tongue + grade_1_3q_mother_tongue + grade_1_4q_mother_tongue) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
-                          </div>
-                        </td>
-                      </tr>
+                  <tbody>
+                    <tr class="grey lighten-5">
+                      <td>&nbsp;Filipino</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_filipino" type="number" class="validate" disabled>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_filipino" type="number" class="validate" v-model.number="grade_1_2q_filipino" number>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_filipino" type="number" class="validate" v-model.number="grade_1_3q_filipino" number>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_filipino" type="number" class="validate" v-model.number="grade_1_4q_filipino" number>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_filipino" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_filipino">{{ Number( ( (grade_1_2q_filipino + grade_1_3q_filipino + grade_1_4q_filipino) / 3 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s2">
+                          <input id="grade_1_final_filipino_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_filipino_remarks">{{ Number( ( (grade_1_2q_filipino + grade_1_3q_filipino + grade_1_4q_filipino) / 3 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="blue lighten-5">
+                      <td>&nbsp;English</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_english" type="text" class="validate" disabled>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_english" type="text" class="validate" disabled>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_english" type="number" class="validate" v-model.number="grade_1_3q_english">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_english" type="number" class="validate" v-model.number="grade_1_4q_english">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_english" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_english">{{ Number( ( (grade_1_3q_english + grade_1_4q_english) / 2 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_english_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_english_remarks">{{ Number( ( (grade_1_3q_english + grade_1_4q_english) / 2 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="indigo lighten-5">
+                      <td>&nbsp;Mathematics</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_mathematics" type="number" class="validate" v-model.number="grade_1_1q_mathematics">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_mathematics" type="number" class="validate" v-model.number="grade_1_2q_mathematics">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_mathematics" type="number" class="validate" v-model.number="grade_1_3q_mathematics">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_mathematics" type="number" class="validate" v-model.number="grade_1_4q_mathematics">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_mathematics" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_mathematics">{{ Number( ( (grade_1_1q_mathematics + grade_1_2q_mathematics + grade_1_3q_mathematics + grade_1_4q_mathematics) / 4 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_mathematics_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_mathematics_remarks">{{ Number( ( (grade_1_1q_mathematics + grade_1_2q_mathematics + grade_1_3q_mathematics + grade_1_4q_mathematics) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="green lighten-5">
+                      <td>&nbsp;Science</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_science" type="number" class="validate" v-model.number="grade_1_1q_science">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_science" type="number" class="validate" v-model.number="grade_1_2q_science">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_science" type="number" class="validate" v-model.number="grade_1_3q_science">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_science" type="number" class="validate" v-model.number="grade_1_4q_science">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_science" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_science">{{ Number( ( (grade_1_1q_science + grade_1_2q_science + grade_1_3q_science + grade_1_4q_science) / 4 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_science_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_science_remarks">{{ Number( ( (grade_1_1q_science + grade_1_2q_science + grade_1_3q_science + grade_1_4q_science) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="orange lighten-5">
+                      <td>&nbsp;Araling Panlipunan</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_ap" type="number" class="validate" v-model.number="grade_1_1q_ap">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_ap" type="number" class="validate" v-model.number="grade_1_2q_ap">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_ap" type="number" class="validate" v-model.number="grade_1_3q_ap">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_ap" type="number" class="validate" v-model.number="grade_1_4q_ap">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_ap" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_ap">{{ Number( ( (grade_1_1q_ap + grade_1_2q_ap + grade_1_3q_ap + grade_1_4q_ap) / 4 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_ap_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_ap_remarks">{{ Number( ( (grade_1_1q_ap + grade_1_2q_ap + grade_1_3q_ap + grade_1_4q_ap) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="blue-grey lighten-5">
+                      <td>&nbsp;Edukasyon sa Pagpapakatao</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_esp" type="number" class="validate" v-model.number="grade_1_1q_esp">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_esp" type="number" class="validate" v-model.number="grade_1_2q_esp">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_esp" type="number" class="validate" v-model.number="grade_1_3q_esp">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_esp" type="number" class="validate" v-model.number="grade_1_4q_esp">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_esp" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_esp">{{ Number( ( (grade_1_1q_esp + grade_1_2q_esp + grade_1_3q_esp + grade_1_4q_esp) / 4 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_esp_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_esp_remarks">{{ Number( ( (grade_1_1q_esp + grade_1_2q_esp + grade_1_3q_esp + grade_1_4q_esp) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td>&nbsp;MAPEH</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_music" type="number" class="validate" disabled>
+                          <label for="grade_1_1q_music">{{ Number( ( (grade_1_1q_music + grade_1_1q_arts + grade_1_1q_pe + grade_1_1q_health) / 4 ).toFixed(0) ) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_music" type="number" class="validate" disabled>
+                          <label for="grade_1_2q_music">{{ Number( ( (grade_1_2q_music + grade_1_2q_arts + grade_1_2q_pe + grade_1_2q_health) / 4 ).toFixed(0) ) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_music" type="number" class="validate" disabled>
+                          <label for="grade_1_3q_music">{{ Number( ( (grade_1_3q_music + grade_1_3q_arts + grade_1_3q_pe + grade_1_3q_health) / 4 ).toFixed(0) ) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_music" type="number" class="validate" disabled>
+                          <label for="grade_1_4q_music">{{ Number( ( (grade_1_4q_music + grade_1_4q_arts + grade_1_4q_pe + grade_1_4q_health) / 4 ).toFixed(0) ) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_music" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_music">{{ Number( ( (grade_1_1q_music + grade_1_2q_music + grade_1_3q_music + grade_1_4q_music) / 4 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_music_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_music_remarks">{{ Number( ( (grade_1_1q_music + grade_1_2q_music + grade_1_3q_music + grade_1_4q_music) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="amber lighten-5">
+                      <td>&nbsp;&nbsp;&nbsp; Music</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_music" type="number" class="validate" v-model.number="grade_1_1q_music">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_music" type="number" class="validate" v-model.number="grade_1_2q_music">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_music" type="number" class="validate" v-model.number="grade_1_3q_music">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_music" type="number" class="validate" v-model.number="grade_1_4q_music">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_music" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_music">{{ Number( ( (grade_1_1q_music + grade_1_2q_music + grade_1_3q_music + grade_1_4q_music) / 4 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_music_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_music_remarks">{{ Number( ( (grade_1_1q_music + grade_1_2q_music + grade_1_3q_music + grade_1_4q_music) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="amber lighten-5">
+                      <td>&nbsp;&nbsp;&nbsp; Arts</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_arts" type="number" class="validate" v-model.number="grade_1_1q_arts">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_arts" type="number" class="validate" v-model.number="grade_1_2q_arts">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_arts" type="number" class="validate" v-model.number="grade_1_3q_arts">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_arts" type="number" class="validate" v-model.number="grade_1_4q_arts">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_music" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_music">{{ Number( ( (grade_1_1q_arts + grade_1_2q_arts + grade_1_3q_arts + grade_1_4q_arts) / 4 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_music_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_music_remarks">{{ Number( ( (grade_1_1q_arts + grade_1_2q_arts + grade_1_3q_arts + grade_1_4q_arts) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="amber lighten-5">
+                      <td>&nbsp;&nbsp;&nbsp; PE</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_pe" type="number" class="validate" v-model.number="grade_1_1q_pe">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_pe" type="number" class="validate" v-model.number="grade_1_2q_pe">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_pe" type="number" class="validate" v-model.number="grade_1_3q_pe">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_pe" type="number" class="validate" v-model.number="grade_1_4q_pe">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_music" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_music">{{ Number( ( (grade_1_1q_pe + grade_1_2q_pe + grade_1_3q_pe + grade_1_4q_pe) / 4 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_music_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_music_remarks">{{ Number( ( (grade_1_1q_pe + grade_1_2q_pe + grade_1_3q_pe + grade_1_4q_pe) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="amber lighten-5">
+                      <td>&nbsp;&nbsp;&nbsp; Health</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_health" type="number" class="validate" v-model.number="grade_1_1q_health">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_health" type="number" class="validate" v-model.number="grade_1_2q_health">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_health" type="number" class="validate" v-model.number="grade_1_3q_health">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_health" type="number" class="validate" v-model.number="grade_1_4q_health">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_health" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_health">{{ Number( ( (grade_1_1q_health + grade_1_2q_health + grade_1_3q_health + grade_1_4q_health) / 4 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_health_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_health_remarks">{{ Number( ( (grade_1_1q_health + grade_1_2q_health + grade_1_3q_health + grade_1_4q_health) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="green lighten-5">
+                      <td>&nbsp; Mother Tongue</td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_1q_mother_tongue" type="number" class="validate" v-model.number="grade_1_1q_mother_tongue">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_2q_mother_tongue" type="number" class="validate" v-model.number="grade_1_2q_mother_tongue">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_3q_mother_tongue" type="number" class="validate" v-model.number="grade_1_3q_mother_tongue">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_4q_mother_tongue" type="number" class="validate" v-model.number="grade_1_4q_mother_tongue">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_mother_tongue_remarks" type="text" class="validate" disabled></input>
+                          <label for="grade_1_final_mother_tongue_remarks">{{ Number( ( (grade_1_1q_mother_tongue + grade_1_2q_mother_tongue + grade_1_3q_mother_tongue + grade_1_4q_mother_tongue) / 4 ).toFixed(0) ).toFixed(2) }}</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-field col s12">
+                          <input id="grade_1_final_mother_tongue_remarks" type="text" class="validate" disabled>
+                          <label for="grade_1_final_mother_tongue_remarks">{{ Number( ( (grade_1_1q_mother_tongue + grade_1_2q_mother_tongue + grade_1_3q_mother_tongue + grade_1_4q_mother_tongue) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
+                        </div>
+                      </td>
+                    </tr>
 
-                    </tbody>
-                  </table>
-                </div>
+                  </tbody>
+                </table>
               </div>
             </div>
 
