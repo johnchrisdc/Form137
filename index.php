@@ -7,6 +7,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.debug.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   <script type="text/javascript" src="js/bin/materialize.min.js"></script>
   <script type="text/javascript" src="js/date_picker/picker.date.js"></script>
   <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
@@ -21,21 +22,31 @@
 </head>
 
 <body>
-  <div class="navbar-fixed">
-    <nav>
-      <div class="container-nav">
-        <div class="nav-wrapper">
-          <a href="" class="brand-logo">
-            <img src="images/kidlat.png" />
-          </a>
-        </div>
-      </div>
-    </nav>
-  </div>
   <div id="app">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="container-nav">
+          <div class="nav-wrapper">
+            <a class="brand-logo">
+              <router-link to="/Form">
+                <img src="images/kidlat.png" />
+              </router-link>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a><router-link to="/part-one">Part I</router-link></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <router-view></router-view>
+  </div>
 
+</body>
+
+<script type="text/x-template" id="template-part-one">
+  <div>
     <div class="container-sexy-body">
-    </br>
       <div class="row">
         <div class="col s12">
           <h5><strong>DepEd Form 137-E</strong></h5>
@@ -85,7 +96,7 @@
             <div class="row">
               <div class="input-field col s3">
                 <input id="petsa_ng_kapanganakan" type="date" class="datepicker">
-                <label for="petsa_ng_kapanganakan">Petsa ng Kapanganakan</label>
+                <label class="active" for="petsa_ng_kapanganakan">Petsa ng Kapanganakan</label>
               </div>
               <div class="input-field col s4">
                 <input id="pook" type="text" class="validate" v-model="pook">
@@ -95,7 +106,7 @@
             <div class="row">
               <div class="input-field col s3">
                 <input id="petsa_ng_pagpasok" type="date" class="datepicker">
-                <label for="petsa_ng_pagpasok">Petsa ng Pagpasok</label>
+                <label class="active" for="petsa_ng_pagpasok">Petsa ng Pagpasok</label>
               </div>
             </div>
             <div class="row">
@@ -261,7 +272,7 @@
                         </div>
                       </td>
                     </tr>
-                    <tr class="green lighten-5">
+                    <!-- <tr class="green lighten-5">
                       <td>&nbsp;Science</td>
                       <td>
                         <div class="input-field col s12">
@@ -295,7 +306,7 @@
                           <label for="grade_1_final_science_remarks">{{ Number( ( (grade_1_1q_science + grade_1_2q_science + grade_1_3q_science + grade_1_4q_science) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</label>
                         </div>
                       </td>
-                    </tr>
+                    </tr> -->
                     <tr class="orange lighten-5">
                       <td>&nbsp;Araling Panlipunan</td>
                       <td>
@@ -584,6 +595,12 @@
                   </tbody>
                 </table>
               </div>
+
+              <div class="input-field col s12">
+                <input type="checkbox" class="filled-in" id="grade_1_eligible_for_admission" v-model="grade_1_eligible_for_admission" />
+                <label for="grade_1_eligible_for_admission">Eligible for Admission to Grade 2</label>
+              </div>
+
             </div>
 
           </div>
@@ -594,7 +611,6 @@
       </div>
     </div>
 
-    <!-- MODAL! -->
     <div id="modal_info" class="modal modal-fixed-footer">
       <div class="modal-content">
         <h5><strong>Eyes on the board!</strong></h5>
@@ -710,7 +726,7 @@
                     <td>{{ Number( ( (grade_1_1q_mathematics + grade_1_2q_mathematics + grade_1_3q_mathematics + grade_1_4q_mathematics) / 4 ).toFixed(0) ).toFixed(2) }}</td>
                     <td>{{ Number( ( (grade_1_1q_mathematics + grade_1_2q_mathematics + grade_1_3q_mathematics + grade_1_4q_mathematics) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</td>
                   </tr>
-                  <tr class="green lighten-5">
+                  <!-- <tr class="green lighten-5">
                     <td>SCIENCE</td>
                     <td>{{ grade_1_1q_science }}</td>
                     <td>{{ grade_1_2q_science }}</td>
@@ -718,7 +734,7 @@
                     <td>{{ grade_1_4q_science }}</td>
                     <td>{{ Number( ( (grade_1_1q_science + grade_1_2q_science + grade_1_3q_science + grade_1_4q_science) / 4 ).toFixed(0) ).toFixed(2) }}</td>
                     <td>{{ Number( ( (grade_1_1q_science + grade_1_2q_science + grade_1_3q_science + grade_1_4q_science) / 4 ).toFixed(0) ).toFixed(2) < 75 ? 'Failed' : 'Passed' }}</td>
-                  </tr>
+                  </tr> -->
                   <tr class="orange lighten-5">
                     <td>ARALING PANLIPUNAN</td>
                     <td>{{ grade_1_1q_ap }}</td>
@@ -796,6 +812,13 @@
               </table>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col s12">
+              <p><strong> {{ grade_1_eligible_for_admission ? '' : 'Not' }} Eligible for Admission to Grade 2</strong></p>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="modal-footer">
@@ -803,11 +826,10 @@
         <a class="modal-action modal-close waves-effect waves-green btn-flat red-text">Cancel</a>
       </div>
     </div>
-
   </div>
 
+</script>
 
-</body>
 
 <script type="text/javascript" src="the.js"></script>
 
